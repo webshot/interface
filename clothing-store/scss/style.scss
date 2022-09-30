@@ -102,11 +102,13 @@ body{
 }
 
 .name-tovar{
+    position: relative;
     display: flex;
     margin-top: 100px;
 }
 
 .ots{
+    cursor:pointer;
     margin-right: 10px;
     margin-top: -100px;
 }
@@ -236,6 +238,7 @@ body{
 }
 
 .block-input-buy{
+    margin-right: 20px;
     width: 334px;
     height: 59px;
     background: radial-gradient(122.88% 122.88% at 50% 50%, rgba(255, 70, 70, 0.35) 0%, rgba(0, 0, 0, 0) 100%);
@@ -310,7 +313,25 @@ margin-bottom: 20px;
 }
 .block-buy{
     overflow-y: scroll;
+    height: 304px;
+
 }
+
+.block-buy::-webkit-scrollbar {
+    margin-left: 30px;
+    width: 2px;
+    background: #0C0000;
+    border-radius: 50px;
+  }
+  
+  .block-buy::-webkit-scrollbar-thumb {
+    height: 20px;
+    background-color: #FF4646;
+    border-radius: 50px;
+    position: relative;
+  }
+
+
 .flex-block-method{
     display: flex;
 }
@@ -337,6 +358,13 @@ margin-left: 15px;
 
 // Адаптив
 
+@media screen and (min-width: 1270px) {
+    .block-clothing{
+        width: 40%;
+        height: 447px;
+    }
+}
+
 @media screen and (min-width: 1280px) {
     .container{
         width: 1192px;
@@ -344,10 +372,24 @@ margin-left: 15px;
 }
 @media screen and (min-width: 1366px) {
     .container{
-        width: 1614px;
+        width: 1300px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .container{
+        width: 1400px;
+    }
+}
+@media screen and (min-width: 1800px) {
+    .block-clothing{
+        width: 22%;
+        height: 758px;
     }
 }
 @media screen and (min-width: 1920px) {
+    .block-clothing{
+        width: 25%;
+    }
     .container{
         width: 1836px;
     }
@@ -359,8 +401,9 @@ margin-left: 15px;
 }
 @media screen and (min-width: 3840px) {
     .container{
-        width: 3749px;
-        width: 2475px;
+        margin-top: 550px;
+        width: 1661px;
+    transform: scale(200%);
     }
 }
 
